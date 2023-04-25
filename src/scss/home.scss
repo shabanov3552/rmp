@@ -1,0 +1,248 @@
+.page {}
+
+.first-block {
+   position: relative;
+   padding-top: rem(330);
+   padding-bottom: rem(264);
+
+   @media (max-width:$laptop) {
+      padding-top: rem(200);
+      padding-bottom: rem(120);
+   }
+
+   @media (max-width:$mobile) {
+      padding: rem(160) 0 rem(100);
+   }
+
+   // .first-block__container
+
+   &__container {}
+
+   // .first-block__content
+
+   &__content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 654px;
+   }
+
+   // .first-block__title
+
+   &__title {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 70px;
+      text-transform: uppercase;
+      margin-bottom: rem(40);
+      color: #1D60D4;
+
+      @media (max-width:$laptop) {
+         font-size: 50px;
+         line-height: 50px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 35px;
+         line-height: 35px;
+      }
+   }
+
+   // .first-block__link
+
+   &__link {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 35px;
+      background: #EF7608;
+      border-radius: 10px;
+      padding: rem(23) rem(28);
+      margin-bottom: rem(40);
+      display: inline-block;
+
+      @media (max-width:$laptop) {
+         padding: rem(20);
+         font-size: 25px;
+         line-height: 25px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 18px;
+         line-height: 18px;
+      }
+
+      @media (max-width: em(370)) {
+         padding: rem(15);
+      }
+   }
+
+   // .first-block__desrc
+
+   &__desrc {
+      font-size: 35px;
+      line-height: 50px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      max-width: 583px;
+
+      @media (max-width:$laptop) {
+         font-size: 25px;
+         line-height: 35px;
+         max-width: 420px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 18px;
+         line-height: 24px;
+         max-width: 300px;
+      }
+   }
+
+   // .first-block__image-ibg
+
+   &__image-ibg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      @media (max-width: em(1100)) {
+         @include adaptiveValue("width", 1100, 1300, 0, 1100, 768);
+      }
+
+      @media (max-width:$mobile) {
+         width: 120%;
+      }
+
+      @media (max-width:$mobileSmall) {
+         width: 180%;
+      }
+   }
+}
+
+.center-block {
+   padding-top: rem(104);
+   padding-bottom: rem(160);
+
+   @media (max-width:$laptop) {
+      padding: rem(100) 0;
+   }
+
+   @media (max-width:$mobile) {
+      padding: rem(50) 0;
+   }
+
+   // .center-block__container
+
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 90px;
+
+      @media (max-width:$tablet) {
+         gap: 50px;
+         grid-template-columns: 1fr;
+      }
+
+      @media (max-width:$mobile) {
+         gap: 20px;
+      }
+   }
+
+   // .center-block__logo
+
+   &__logo {
+      @media (max-width:$tablet) {
+         height: 200px;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         object-position: top;
+      }
+   }
+
+   // .center-block__content
+
+   &__content {
+      font-size: 35px;
+      line-height: 45px;
+      color: #393E3F;
+
+      @media (max-width:$laptop) {
+         font-size: 30px;
+         line-height: 35px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 20px;
+         line-height: 25px;
+      }
+   }
+
+   // .center-block__title
+
+   &__title {
+      margin-bottom: rem(40);
+   }
+
+   // .center-block__descr
+
+   &__descr {
+      margin-bottom: rem(40);
+   }
+
+   // .center-block__list
+
+   &__list {
+      font-size: 25px;
+      line-height: 25px;
+      color: #000;
+
+      @media (max-width:$laptop) {
+         font-size: 20px;
+         line-height: 20px;
+      }
+
+      @media (max-width:$mobile) {
+         font-size: 18px;
+         line-height: 18px;
+      }
+   }
+
+   // .center-block__item
+
+   &__item {
+      display: flex;
+      gap: 30px;
+
+      @media (max-width:$mobile) {
+         gap: 15px;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: rem(40);
+      }
+
+      &::before {
+         content: '';
+         flex: 0 0 20px;
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         display: block;
+         background: #EF7608;
+
+         @media (max-width:$mobile) {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+         }
+      }
+   }
+}
